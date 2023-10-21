@@ -1,0 +1,18 @@
+config:
+  environments:
+    localhost:
+      target: "http://localhost:3000"
+      phases: 
+      - name: "Warm up"
+        duration: 10
+        arrivalRate: 5
+        rampTo: 20
+      - name: "Load Test"
+        duration: 20
+        arrivalRate: 20
+scenarios:
+  - name: "Listar Usuarios"
+    flow:
+      - get:
+          url: "/usuarios"
+
