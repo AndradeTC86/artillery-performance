@@ -8,11 +8,11 @@ config:
         arrivalRate: 5
         rampTo: 20
       - name: "Load Test"
-        duration: 20
+        duration: 30
         arrivalRate: 20
+        rampTo: 40
 scenarios:
   - name: "Listar Usuarios"
     flow:
       - get:
           url: "/usuarios"
-
